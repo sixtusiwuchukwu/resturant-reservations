@@ -1,10 +1,10 @@
-const Mutation = {
+const FoodMutation = {
   reserveFood: async (args, { data }, { datasource }) => {
     const { ReserveFood } = datasource;
     return await new ReserveFood().reserveFood(data);
   },
 };
-const Query = {
+const FoodQuery = {
   getReservedFoods: async (args, { datasource }) => {
     const { ReserveFood } = datasource;
     return await new ReserveFood().getReservedFoods();
@@ -12,6 +12,6 @@ const Query = {
 };
 
 module.export = {
-  Mutation,
-  Query,
+  FoodMutation,
+  FoodQuery,
 };

@@ -1,10 +1,10 @@
-const Mutation = {
+const TableMutation = {
   reserveTable: async (args, { data }, { datasource }) => {
     const { ReserveTable } = datasource;
     return await new ReserveTable().reserveTable(data);
   },
 };
-const Query = {
+const TableQuery = {
   getReservedFoods: async (args, { datasource }) => {
     const { ReserveTable } = datasource;
     return await new ReserveTable().getReservedFoods();
@@ -12,6 +12,6 @@ const Query = {
 };
 
 module.export = {
-  Mutation,
-  Query,
+  TableMutation,
+  TableQuery,
 };
